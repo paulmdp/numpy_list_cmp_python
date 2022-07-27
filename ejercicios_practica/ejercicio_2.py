@@ -19,10 +19,14 @@ if __name__ == '__main__':
     # (len) de un string pasado como parámetro
 
     # len_string = lambda......
-
+    len_string = lambda p: len(str(p))
+    palabra = input(str('Ingresa una palabra: '))
+    print('cantidad de carácteres de la palabra ingresada:', len_string(palabra))
+    
     # 2)
     # Lista de string
     palabras = ['Inove', 'casa', 'programacion']
+    
 
     # Utilice la función map para mapear una lambda expression
     # que retorne el tamaño (len) de cada texto em cata iteración
@@ -35,5 +39,8 @@ if __name__ == '__main__':
     # directamente la lambda.
 
     # palabras_len = list(map....)
+    len_string = lambda p: len(str(p))
+    palabras_len = list(map(len_string,palabras))
+    print("Longitud de cada palabra:",palabras_len)
 
     print("terminamos")

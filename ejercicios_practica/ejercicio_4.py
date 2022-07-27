@@ -24,11 +24,21 @@ if __name__ == '__main__':
     # reemplazar dicho str "no numérico" por 0
     # TIP: Recomendamos ver el método "isdigit" de strings
     # para aplicar en este caso.
+    
     list_numeros_str = ['5', '2', '3', '', '7', 'NaN']
+    lista_integer = [int(n) if n.isdigit() is True else 0 for n in list_numeros_str ]
+
+    print ('Lista de valores enteros convertidos: ', lista_integer)
+
+
 
 
     # ¿Ya terminaron el ejercicio? ¿Por qué no prueban
     # hacer negativo alguno de los números de la lista?
     # ¿Qué sucede con isdigit? Sorprendente no?
+    list_numeros_str = ['-5', '2', '-3', '', '7', 'NaN']
+    lista_integer = [int(n) if n.isdigit() is True else 0 for n in list_numeros_str ]
 
+    print ('Lista de valores enteros convertidos: ', lista_integer)
+    print("Los valores con signo menos, no los toma como dígito")
     print("terminamos")

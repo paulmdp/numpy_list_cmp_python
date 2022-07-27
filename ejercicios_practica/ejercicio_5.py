@@ -30,6 +30,11 @@ if __name__ == '__main__':
 
     # personal_1_10 = [.....]
 
+    personal_1_10 = [p for p in accesos if(p>=1 and p<=10)]
+    print('Personal filtrado con id_1_10: ', personal_1_10)
+    cantidad_accesos =len(personal_1_10)
+    print('Cantidad de accesos con Id 1 a 10 es:', cantidad_accesos)
+
     # 2)
     # Generar una lista por comprensión de la listas "accesos"
     # cuyo ID de personal esté dentro de los ID válidos para ingresar
@@ -41,5 +46,8 @@ if __name__ == '__main__':
     # dentro de "id_validos"
 
     # personal_valido = [.....]
+
+    personal_valido = [p for p in accesos if p in id_validos]
+    print('Personal con Id autorizados: ', personal_valido)
 
     print("terminamos")
